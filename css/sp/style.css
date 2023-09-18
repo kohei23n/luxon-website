@@ -1,0 +1,146 @@
+@media (max-width: 768px) {
+
+  /* 共通 */
+
+  .section_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .section_title span {
+    font-size: 10px;
+  }
+
+  /* ヘッダー */
+
+  header{
+    position: fixed;
+    height: 7vh;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .header_list, .footer_list {
+    gap: 10px;
+  }
+  
+  .header_list li, .footer_list li {
+    font-size: 12px;
+  }
+  
+  /* メインセクション */
+
+  .main {
+    height: 55vh;
+  }
+
+  /* 特徴 */
+
+  .features {
+    height: 45vh;
+    padding: 36px 0;
+  }
+
+  .feature_body {
+    flex-direction: column;
+    gap: 10px;  
+    flex-wrap: wrap;  
+    justify-content: center; 
+  }
+
+  .feature_card {
+    padding: 15px;
+  }
+
+  /* 実績 */
+
+  .achievements {
+    padding: 36px 0;
+  }
+  
+  .achieve_body {
+    width: 90%;
+    padding: 20px;
+    justify-content: space-between;  
+  }
+  
+  .achieve_left, .achieve_right {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;  
+  }
+  
+  .achieve_left p, .achieve_right p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .inner_left_column {
+    text-align: left;
+  }
+  
+  .achieve_supp {
+    font-size: 10px;
+  }
+
+  /* サービス */
+
+  .service {
+    padding: 36px 0;
+  }
+
+  .service_body {
+    margin: 0 auto 20px auto;
+  }
+
+  .service_detail img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+  }
+
+  .service_text {
+    margin-top: 20px;
+  }
+  
+  .service_text h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .service_text p {
+    font-size: 14px;
+  }
+
+  /* イベント */
+
+  .event_slideTrack {
+    overflow: hidden;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
+  .event_item {
+    padding: 14px;
+  }
+
+  .event_image img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 30px;
+  }
+
+  .event_itemName {
+
+    font-size: 13px;
+  }
+
+}
