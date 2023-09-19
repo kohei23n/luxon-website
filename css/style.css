@@ -63,7 +63,7 @@ header{
 }
 
 .entry_header {
-  background: linear-gradient(to bottom left, #b3cdde 0%, #093153 100%);
+  background: linear-gradient(to bottom left, rgba(71, 125, 154, 0.9) 0%, rgba(10, 55, 92, 0.9) 100%);
   padding: 10px 20px;
   margin-top: 8px;
   color: #FFFFFF;
@@ -77,7 +77,7 @@ header{
   margin: 0 auto;
   width: 200px;
   height: 48px;
-  background: linear-gradient(to bottom left, #b3cdde 0%, #093153 100%);
+  background: linear-gradient(to bottom left, rgba(71, 125, 154, 0.9) 0%, rgba(10, 55, 92, 0.9) 100%);
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -119,101 +119,6 @@ header{
   padding: 80px 0;
   background: #000000;
 }
-
-/* 特徴 */
-
-/* .features {
-  height: 25vh;
-  padding: 80px 0;
-  background: #FFFFFF;
-  color: #000000;
-  display: flex;  
-  flex-direction: column;  
-  align-items: center;  
-}
-
-.feature_detail {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.feature_text {
-  display: flex;
-  align-items: center;
-}
-
-.feature_text h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  margin-left: 40px;
-  line-height: 1.2;
-}
-
-.feature_number {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-} */
-
-/* .features {
-  height: auto;
-  padding: 80px 0;
-  background: #FFFFFF;
-  color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px; 
-}
-
-.feature_body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.feature_detail.top {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.feature_detail.bottom {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  gap: 20px;  
-}
-
-.feature_circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 50%; 
-  width: 150px;  
-  height: 150px; 
-  background-color: #e0e0e0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  
-  text-align: center;
-}
-
-.feature_text h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1.2;
-  text-align: center;
-} */
 
 .features {
   padding: 80px 0;
@@ -261,7 +166,6 @@ header{
   border-radius: 50%;
   flex-shrink: 0;  /* 数字部分が縮小されないようにする */
 }
-
 
 /* 実績 */
 
@@ -410,6 +314,42 @@ header{
 
 .splide__arrow--next {
   right: 8px;
+}
+
+/* ニュース */
+
+.news {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.news_body {
+  background: #F8F8F8;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.16) inset;
+}
+
+.news_item {
+  border-top: 1px solid #dfdfdf;
+  padding: 10px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.news_item a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.news_date {
+  width: 150px;
+  padding: 10px 0;
+  margin-right: 50px;
+  font-weight: bold;
+  color: rgba(71, 125, 154, 0.9);
 }
 
 /* フッター */
