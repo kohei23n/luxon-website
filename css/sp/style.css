@@ -133,8 +133,17 @@
     margin-bottom: 30px;
   }
 
-  .event_itemName {
+  .event_name {
     font-size: 13px;
+  }
+
+  .event_description {
+    font-size: 13px;
+  }
+
+  .modal_content {
+    padding: 20px;
+    width: 70%;
   }
 
   /* ニュース */

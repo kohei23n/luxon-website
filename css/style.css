@@ -44,7 +44,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background: #FFFFFF;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .logo {
@@ -97,27 +97,6 @@ header {
   height: 100%;
   object-fit: cover;
   position: relative;
-}
-
-.main_text {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: #EEEEEE;
-}
-
-.main_text h1 {
-  font-size: 80px;
-}
-
-.main_text p {
-  font-size: 40px;
-}
-
-.main_text h2 {
-  font-size: 40px;
-  background-color: #000000;
-  width: 380px;
 }
 
 /* コンセプト */
@@ -241,7 +220,7 @@ header {
 
 .service_text h2 {
   font-size: 24px;
-  color: #3C4860;
+  color: rgba(10, 55, 92, 0.9);
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -285,6 +264,7 @@ header {
   background-color: #FFFFFF;
   text-align: center;
   padding: 25px;
+  cursor: pointer;
 }
 
 .event_image img {
@@ -294,13 +274,66 @@ header {
   margin-bottom: 20px;
 }
 
-.event_itemName {
-  color: #000;
+.event_name {
+  color: rgba(10, 55, 92, 0.9);
   margin-top: 4px;
   font-size: 20px;
   line-height: 1.8;
   letter-spacing: 0.1em;
   font-weight: bold;
+}
+
+.event_description {
+  margin-top: 15px;
+}
+
+/* イベントモーダル */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.modal_content {
+  background-color: #FEFEFE;
+  color: rgba(10, 55, 92, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.modal_content img {
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.modal_active {
+  font-size: 16px;
+}
+
+.close {
+  color: #AAAAAA;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* スライダー */

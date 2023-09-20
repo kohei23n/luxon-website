@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
   const loginForm = document.querySelector('form');
   loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();  // フォームのデフォルトの送信動作を停止
-    alert('正しいメールアドレスとパスワードを入力してください。');  // エラーメッセージを表示
+    e.preventDefault(); // フォームのデフォルトの送信動作を停止
+    alert('正しいメールアドレスとパスワードを入力してください。'); // エラーメッセージを表示
   });
 });
 
@@ -22,7 +22,7 @@ const eventSlideOptions = {
   perPage: 3,
   padding: {
     right: padding,
-    left : padding,
+    left: padding,
   },
   pagination: false,
   breakpoints: {
@@ -36,3 +36,53 @@ const eventSlideOptions = {
 }
 
 new Splide('#event_slide', eventSlideOptions).mount();
+
+// モーダル
+
+// モーダル要素の参照を取得
+var modal = document.getElementById('eventModal');
+var modalContent = document.querySelector('.modal_content');
+var modalImage = modalContent.querySelector('img');
+var modalTitle = document.getElementById('modalTitle');
+var modalDescription = document.getElementById('modalDescription');
+
+// クローズボタンの参照を取得
+var closeModal = document.querySelector('.close');
+
+// イベントアイテムの参照を取得
+var eventItems = document.querySelectorAll('.event_item');
+
+eventItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    // イベントアイテムから画像と文章を取得
+    var imageSrc = item.querySelector('.event_image img').src;
+    var title = item.querySelector('.event_name').textContent;
+    var description = item.querySelector('.event_description').textContent;
+
+    // モーダルウィンドウに画像と文章を設定
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+
+    // モーダルウィンドウを表示
+    modal.style.display = "block";
+
+    // モーダルコンテンツにmodal_activeクラスを追加
+    if (window.innerWidth <= 768) {
+      modalContent.classList.add('modal_active');
+    }
+  });
+});
+
+// クローズボタンをクリックしたときの処理
+closeModal.addEventListener('click', function () {
+  modal.style.display = "none";
+  modalContent.classList.remove('modal_active');
+});
+
+// モーダルの外側をクリックしたときも閉じる
+window.addEventListener('click', function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
