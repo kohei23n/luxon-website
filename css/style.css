@@ -34,15 +34,17 @@ body {
 
 /* ヘッダー */
 
-header{
+header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 7vh;
-  margin: 0 auto;
-  padding: 0 10px;
+  height: 10vh;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: #000000;
+  background: #FFFFFF;
+  z-index: 1000;
 }
 
 .logo {
@@ -86,6 +88,8 @@ header{
 
 .main {
   position: relative;
+  height: 90vh;
+  margin-top: 10vh;
 }
 
 .main img {
@@ -99,14 +103,17 @@ header{
   position: absolute;
   top: 30%;
   left: 5%;
-  color: #eee;
+  color: #EEEEEE;
 }
+
 .main_text h1 {
   font-size: 80px;
 }
+
 .main_text p {
   font-size: 40px;
 }
+
 .main_text h2 {
   font-size: 40px;
   background-color: #000000;
@@ -122,7 +129,7 @@ header{
 
 .features {
   padding: 80px 0;
-  background: #FFFFFF;
+  background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
   color: #000000;
   display: flex;
   flex-direction: column;
@@ -141,6 +148,7 @@ header{
   align-items: center;
   justify-content: space-evenly;
   padding: 20px;
+  background: #FFFFFF;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
@@ -171,7 +179,7 @@ header{
 
 .achievements {
   padding: 80px 0;
-  background: #000;
+  background: linear-gradient(to top left, #444444, #000000);
   color: #FFFFFF;
 }
 
@@ -180,13 +188,13 @@ header{
   width: 70%;
   margin: 0 auto 20px auto;
   padding: 20px 40px;
-  justify-content: space-between;  /* 子要素の間にスペースを挿入する */
+  justify-content: space-between; 
 }
 
 .achieve_left, .achieve_right {
   display: flex;
   justify-content: space-between;
-  width: 40%;  /* 適当に調整して、両方の列が親要素の幅に収まるようにする */
+  width: 40%;  
 }
 
 .achieve_left p, .achieve_right p {
@@ -206,7 +214,7 @@ header{
 
 .service {
   padding: 80px 0;
-  background: #FFFFFF;
+  background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
 }
 
 .service_body {
@@ -249,14 +257,14 @@ header{
   border-radius: 40px;
   height: 40px;
   line-height: 40px;
-  box-shadow: 0px 0px 10px #a5a5a5;
+  box-shadow: 0px 0px 10px #A5A5A5;
 }
 
 /* イベント */
 
 .event {
   padding: 80px 0;
-  background: #000;
+  background: linear-gradient(to top left, #444444, #000000);
   color: #FFFFFF;
 }
 
@@ -296,6 +304,7 @@ header{
 }
 
 /* スライダー */
+
 .splide__arrow {
   width: 40px;
   height: 40px;
@@ -320,7 +329,7 @@ header{
 
 .news {
   padding: 80px 0;
-  background: #FFFFFF;
+  background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
 }
 
 .news_body {
@@ -332,7 +341,7 @@ header{
 }
 
 .news_item {
-  border-top: 1px solid #dfdfdf;
+  border-top: 1px solid #DFDFDF;
   padding: 10px 0;
   text-align: left;
   display: flex;
@@ -340,7 +349,7 @@ header{
 }
 
 .news_item a {
-  color: blue;
+  color: #0000EE;
   text-decoration: underline;
 }
 
@@ -356,7 +365,7 @@ header{
 
 footer {
   padding: 80px 0;
-  background: #fff;
+  background: #FFFFFF;
 }
 
 .footer_upper {
@@ -376,12 +385,12 @@ footer {
   display: block;
   padding: 0 24px;
   margin: 2px 5px;
-  color: #fff;
+  color: #FFFFFF;
   background: #3C4860;
   border-radius: 40px;
   height: 40px;
   line-height: 40px;
-  box-shadow: 0px 0px 10px #a5a5a5;
+  box-shadow: 0px 0px 10px #A5A5A5;
 }
 
 .footer_list {
@@ -395,65 +404,60 @@ footer {
 
 /* ログインページ */
 
-/* ログイン画面スタイル */
 .login_section {
-  height: 100vh;
-  background: #f7f7f7;
+  position: relative;
+  background: #FFFFFF;
+  max-width: 30%;
+  margin: 150px auto 0;
+  padding: 50px 45px 30px;
   text-align: center;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .login_container {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 
-.login_title {
-  font-size: 48px;  /* タイトルの文字サイズを非常に大きく */
-  margin-bottom: 30px;
-}
-
 .input_group {
-  margin: 0 auto 30px;
-  width: 80%;
+  margin: 0 auto 10px;
+  width: 90%;
 }
 
-label {
-  display: block;
-  font-size: 24px;  
-  margin-bottom: 10px;
-}
-
-input[type="email"], input[type="password"] {
+input[type="text"], input[type="password"] {
+  outline: 0;
+  background: #f2f2f2;
   width: 100%;
-  padding: 18px 20px;  /* paddingを非常に大きく */
-  font-size: 24px;  /* 入力の文字サイズを非常に大きく */
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  box-sizing: border-box;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+  text-align: left;
 }
 
 .submit_group {
-  margin: 0 auto 30px;
-  width: 80%;
+  margin: 0 auto 10px;
+  width: 90%;
 }
 
 input[type="submit"] {
-  padding: 18px 20px;  /* paddingを非常に大きく */
-  background-color: #064684;
+  padding: 18px 20px; 
+  background: linear-gradient(to bottom left, rgba(71, 125, 154, 0.9) 0%, rgba(10, 55, 92, 0.9) 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   width: 100%;
-  font-size: 24px;  /* ボタンの文字サイズを非常に大きく */
+  margin-bottom: 20px;
+  font-size: 18px;  
   transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
   background-color: #053467;
+}
+
+.submit_group a {
+  text-decoration: underline;
+  color: #0000EE;
 }
 
 .login_footer {

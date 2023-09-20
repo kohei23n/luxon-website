@@ -2,10 +2,12 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ログインページ | メンティ就活コミュニティ</title>
-    <meta name="description" content="ログインページ">
+    <meta name="description" content="ログインページ" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sp/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
       rel="stylesheet"
@@ -14,58 +16,39 @@
 
   <body>
     <header>
-      <div class="logo">
-        lu
-        <svg
-          class="logo-svg"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line x1="0" y1="24" x2="24" y2="0" stroke="#8a2be2" stroke-width="3"/>
-          <line x1="24" y1="24" x2="0" y2="0" stroke="black" stroke-width="3"/>
-        </svg>
-        on
-      </div>
+      <a href="./index.html"><div class="logo">Luxon</div></a>
       <nav>
         <ul class="header_list">
-          <li>コンセプト</li>
-          <li>コース</li>
-          <li>特徴</li>
-          <li>お知らせ</li>
-          <li>アクセス</li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd2U_ExgUYFbIGtbjJJlrT94viccBtanj66AH87p52bbMHsuQ/viewform?usp=sf_link" class="entry_header">ENTRY</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="login_section">
       <div class="login_container">
-        <h2 class="login_title">ログイン</h2>
         <form action="#" method="post">
           <div class="input_group">
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="text" id="number" placeholder="会員番号" required />
           </div>
           <div class="input_group">
-            <label for="password">パスワード:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" placeholder="パスワード" required />
           </div>
           <div class="submit_group">
-            <input type="submit" value="ログイン">
+            <input type="submit" value="LOG IN" />
+            <a href="./index.html" >戻る</a>
           </div>
         </form>
       </div>
     </section>
 
-    <footer class="login_footer">
+    <footer>
       <div class="container">
-        <nav class="footer_menu">
+        <div class="footer_upper">
+          <div class="logo">Luxon</div>
+        </div>
+        <nav>
           <ul class="footer_list">
-            <li><a href="#">コンセプト</a></li>
-            <li><a href="#">サービスコース</a></li>
-            <li><a href="#">特徴</a></li>
-            <li><a href="#">お知らせ</a></li>
-            <li><a href="#">アクセスマップ</a></li>
-            <li><a href="#">企業の方へ</a></li>
+            <li><a href="#" class="entry_header">ENTRY</a></li>
           </ul>
         </nav>
       </div>

@@ -14,14 +14,8 @@
   /* ヘッダー */
 
   header{
-    position: fixed;
     height: 7vh;
     padding: 0 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #FFFFFF;
-    z-index: 1000;
   }
 
   .logo {
@@ -40,13 +34,14 @@
 
   .main {
     height: 55vh;
+    margin-top: 7vh;
   }
 
   /* 特徴 */
 
   .features {
     height: 45vh;
-    padding: 36px 0;
+    padding: 30px 0;
   }
 
   .feature_body {
@@ -164,5 +159,50 @@
   .news_date {
     padding: 10px 0 15px 0;
   }
+
+  /* ログインページ */
+
+  .login_section {
+    max-width: 80%;
+    margin: 150px auto 0;
+    padding: 50px 30px 35px;
+    text-align: center;
+  }
+  
+  .login_container {
+    width: 100%;
+  }
+  
+  .input_group {
+    margin: 0 auto 10px;
+    width: 90%;
+  }
+  
+  input[type="text"], input[type="password"] {
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .submit_group {
+    margin: 0 auto 20px;
+  }
+  
+  input[type="submit"] {
+    padding: 18px 10px; 
+    font-size: 14px;  
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #053467;
+  }
+  
+  .login_footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
 
 }
