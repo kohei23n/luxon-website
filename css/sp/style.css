@@ -14,12 +14,12 @@
   /* ヘッダー */
 
   header{
-    height: 7vh;
+    height: 9vh;
     padding: 0 12px;
   }
 
   .logo {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .header_list, .footer_list {
@@ -33,14 +33,14 @@
   /* メインセクション */
 
   .main {
-    height: 55vh;
+    height: 53vh;
     margin-top: 7vh;
   }
 
   /* 特徴 */
 
   .features {
-    height: 45vh;
+    height: 40vh;
     padding: 30px 0;
   }
 
@@ -100,7 +100,8 @@
   }
 
   .service_body {
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
+    padding: 0 10%;
   }
 
   .service_detail img {
@@ -153,6 +154,10 @@
     width: 70%;
   }
 
+  .modal_active_text {
+    font-size: 16px;
+  }
+
   /* ニュース */
 
   .news {
@@ -180,14 +185,22 @@
   footer {
     padding: 36px 0;
   }
+  
+  .footer_upper {
+    margin: 0;
+  }
 
   .footer_icons {
-    flex-direction: column;
     gap: 20px;
   }
 
   .footer_item {
     font-size: 16px;
+  }
+
+  .footer_link img {
+    width: 40px;
+    height: 40px;
   }
 
   /* ログインページ */

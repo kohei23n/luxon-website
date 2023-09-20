@@ -69,7 +69,7 @@ eventItems.forEach(function (item) {
 
     // モーダルコンテンツにmodal_activeクラスを追加
     if (window.innerWidth <= 768) {
-      modalContent.classList.add('modal_active');
+      modalTitle.classList.add('modal_active_text');
     }
   });
 });
@@ -77,7 +77,7 @@ eventItems.forEach(function (item) {
 // クローズボタンをクリックしたときの処理
 closeModal.addEventListener('click', function () {
   modal.style.display = "none";
-  modalContent.classList.remove('modal_active');
+  modalTitle.classList.remove('modal_active_text');
 });
 
 // モーダルの外側をクリックしたときも閉じる

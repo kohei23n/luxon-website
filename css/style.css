@@ -3,7 +3,6 @@
 /* 共通スタイル */
 
 body {
-  font-family: "Hiragino Kaku Gothic Pro","Meiryo",sans-serif;
   font-size:15px;
 }
 
@@ -17,6 +16,7 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 42px;
+  font-style: italic;
   letter-spacing: 2px;
   margin-bottom: 50px;
 }
@@ -50,6 +50,7 @@ header {
 .logo {
   font-size: 48px;
   font-weight: 900;
+  font-style: italic;
   display: flex;
   align-items: center;
 }
@@ -197,8 +198,8 @@ header {
 }
 
 .service_body {
-  margin: 0 auto 50px auto;
-  padding: 0 10%;
+  margin: 0 auto;
+  padding: 0 20%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -319,10 +320,6 @@ header {
   margin-bottom: 10px;
 }
 
-.modal_active {
-  font-size: 16px;
-}
-
 .close {
   color: #AAAAAA;
   float: right;
@@ -439,6 +436,11 @@ footer {
   font-size: 18px;
 }
 
+.footer_link img {
+  width: 50px;
+  height: 50px;
+}
+
 .footer_list {
   display: flex;
   justify-content: center;
@@ -447,6 +449,11 @@ footer {
 
 .fab {
   margin-right: 10px;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
 }
 
 /* ログインページ */
