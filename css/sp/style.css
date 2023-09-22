@@ -180,6 +180,16 @@
     padding: 10px 0 15px 0;
   }
 
+  .tab {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tab button {
+    padding: 10px 13px;
+    transition: 0.3s;
+  }
+
   /* フッター */
 
   footer {

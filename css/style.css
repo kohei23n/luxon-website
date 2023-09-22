@@ -362,6 +362,13 @@ header {
   background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
 }
 
+.news_heading {
+  font-weight: bold;
+  font-size: 24px;
+  font-style: italic;
+  margin: 20px 0;
+}
+
 .news_body {
   background: #F8F8F8;
   width: 60%;
@@ -391,10 +398,43 @@ header {
   color: rgba(71, 125, 154, 0.9);
 }
 
+.tab {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #CCCCCC;
+  background-color: #F1F1F1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: rgba(71, 125, 154, 0.3);
+}
+
+.tab_content {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #CCCCCC;
+  border-top: none;
+}
+
 /* フッター */
 
 footer {
-  padding: 80px 0;
+  padding: 50px 0;
   background: #FFFFFF;
 }
 

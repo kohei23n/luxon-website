@@ -86,3 +86,28 @@ window.addEventListener('click', function (event) {
     modal.style.display = "none";
   }
 });
+
+// タブ切り替え
+
+function openIndustry(evt, openIndustry) {
+  let i, tabcontent, tablinks;
+
+  // tab_content クラスを持つ要素をすべて非表示にする
+  tabcontent = document.getElementsByClassName("tab_content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // tab_links クラスを持つ要素の active クラスをすべて削除する
+  tablinks = document.getElementsByClassName("tab_links");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // クリックされたタブのみを表示する
+  document.getElementById(openIndustry).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// デフォルトで開いておくタブを指定
+document.getElementById("defaultOpen").click();
