@@ -1,13 +1,27 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-  const loginForm = document.querySelector('form');
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // フォームのデフォルトの送信動作を停止
-    alert('正しいメールアドレスとパスワードを入力してください。'); // エラーメッセージを表示
-  });
+/**
+ * ヘッダーの透過
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Window/scrollY
+ * @see https://developer.mozilla.org/ja/docs/Web/API/Element/clientHeight
+ *
+ * @description スクロールしてメインビジュアルを過ぎる時にヘッダーにクラスを付与する
+ */
+
+
+// メインビジュアルの要素を取得
+const header = document.getElementById("header");
+const mainVisual = document.getElementById("mainVisual");
+
+// スクロールした時の処理
+window.addEventListener("scroll", () => {
+  // [スクロールした分の高さ] が [メインビジュアルの高さ - ヘッダーの高さ] より大きい時
+  if (window.scrollY > mainVisual.clientHeight - header.clientHeight) {
+    header.classList.remove("is-transparent");
+  } else {
+    header.classList.add("is-transparent");
+  }
 });
 
 // スライダー
-/* スライダー */
 // オプションで利用する固定値の設定
 const cardWidth = 320;
 const padding = 32;
@@ -111,3 +125,14 @@ function openIndustry(evt, openIndustry) {
 
 // デフォルトで開いておくタブを指定
 document.getElementById("defaultOpen").click();
+
+
+// ログインの処理
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  const loginForm = document.querySelector('form');
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // フォームのデフォルトの送信動作を停止
+    alert('正しいメールアドレスとパスワードを入力してください。'); // エラーメッセージを表示
+  });
+});

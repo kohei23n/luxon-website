@@ -34,7 +34,7 @@ body {
 
 /* ヘッダー */
 
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -45,6 +45,15 @@ header {
   justify-content: space-between;
   background: #FFFFFF;
   z-index: 1;
+}
+
+.header.is-transparent {
+  background-color: transparent;
+  border: none;
+}
+
+.header.is-transparent:not(.is-open) .header-logo {
+  filter: brightness(10);
 }
 
 .logo {
@@ -89,8 +98,7 @@ header {
 
 .main {
   position: relative;
-  height: 90vh;
-  margin-top: 10vh;
+  height: 100vh;
 }
 
 .main img {
