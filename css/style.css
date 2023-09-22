@@ -362,13 +362,6 @@ header {
   background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
 }
 
-.news_heading {
-  font-weight: bold;
-  font-size: 24px;
-  font-style: italic;
-  margin: 20px 0;
-}
-
 .news_body {
   background: #F8F8F8;
   width: 60%;

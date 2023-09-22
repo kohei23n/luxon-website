@@ -293,7 +293,16 @@
           ニュース & コラム
           <span>News & Column</span>
         </h2>
-        <div class="news_body">
+
+        <!-- タブ -->
+        <div class="tab">
+          <button class="tab_links" onclick="openIndustry(event, 'all')" id="defaultOpen">トップ</button>
+          <button class="tab_links" onclick="openIndustry(event, 'consult')" >コンサル</button>
+          <button class="tab_links" onclick="openIndustry(event, 'trade')">商社</button>
+          <button class="tab_links" onclick="openIndustry(event, 'dev')">デベロッパー</button>
+        </div>
+
+        <div id="all" class="tab_content news_body">
           <ul class="news_list">
             <li class="news_item">
               <span class="news_date">2023-09-15</span>
@@ -310,15 +319,6 @@
               </p>
             </li>
           </ul>
-        </div>
-
-        <h3 class="news_heading">業界別</h3>
-
-        <!-- タブ -->
-        <div class="tab">
-          <button class="tab_links" onclick="openIndustry(event, 'consult')" id="defaultOpen">コンサル</button>
-          <button class="tab_links" onclick="openIndustry(event, 'trade')">商社</button>
-          <button class="tab_links" onclick="openIndustry(event, 'dev')">デベロッパー</button>
         </div>
 
         <div id="consult" class="tab_content news_body">
