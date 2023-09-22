@@ -263,7 +263,7 @@
   .article_wrapper {
     margin: 0 auto 20px;
     max-width: 330px;
-    padding: 20px 40px;
+    padding: 20px;
   }
 
   .article_wrapper p {
@@ -294,6 +294,25 @@
     font-size: 16px;
     padding: 8px 8px 8px 16px;
     margin: 20px 0;
+  }
+
+  /* テーブル */
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px auto 0;
+  }
+  
+  th {
+    background-color:  rgba(71, 125, 154, 0.3);
+    font-weight: bold;
+  }
+  
+  th,td {
+    padding: 10px;
+    border: 1px solid #000000;
+    width: 50%;
   }
 
 }
