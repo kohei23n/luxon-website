@@ -228,20 +228,6 @@ body {
   line-height: 1.6;
 }
 
-.apply_btn {
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-  width: 300px;
-  padding: 0 24px;
-  color: #FFFFFF;
-  background: #3C4860;
-  border-radius: 40px;
-  height: 40px;
-  line-height: 40px;
-  box-shadow: 0px 0px 10px #A5A5A5;
-}
-
 /* イベント */
 
 .event {
