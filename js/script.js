@@ -1,14 +1,34 @@
 /**
+ * ハンバーガーメニュー
+ *
+ * @description 
+ */
+
+// ヘッダー・ボタンの要素を取得
+const header = document.getElementById("header");
+const button = document.getElementById("headerButton");
+const menuLinks = document.querySelectorAll('.header_menuLink');
+
+// ボタンをクリックした時の処理
+button.addEventListener("click", () => {
+  header.classList.toggle("is-open");
+});
+
+// メニューの各リンクをクリックしたときの処理
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    header.classList.remove('is-open');
+  });
+});
+
+/**
  * ヘッダーの透過
- * @see https://developer.mozilla.org/ja/docs/Web/API/Window/scrollY
- * @see https://developer.mozilla.org/ja/docs/Web/API/Element/clientHeight
  *
  * @description スクロールしてメインビジュアルを過ぎる時にヘッダーにクラスを付与する
  */
 
 
 // メインビジュアルの要素を取得
-const header = document.getElementById("header");
 const mainVisual = document.getElementById("mainVisual");
 
 // スクロールした時の処理
@@ -54,9 +74,9 @@ new Splide('#event_slide', eventSlideOptions).mount();
 // モーダル
 
 function setupModal(modalId, itemSelector, contentSelectors) {
-  var modal = document.getElementById(modalId);
-  var items = document.querySelectorAll(itemSelector);
-  var closeModalButton = modal.querySelector('.close');
+  const modal = document.getElementById(modalId);
+  const items = document.querySelectorAll(itemSelector);
+  const closeModalButton = modal.querySelector('.close');
 
   items.forEach(function (item) {
     item.addEventListener('click', function () {
