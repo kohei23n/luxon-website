@@ -104,8 +104,9 @@
   }
 
   .service_detail {
-    width: 40%;
+    width: 45%;
     margin: 10px auto;
+    padding: 10px;
   }
 
   .service_detail img {
