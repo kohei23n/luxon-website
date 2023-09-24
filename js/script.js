@@ -53,55 +53,59 @@ new Splide('#event_slide', eventSlideOptions).mount();
 
 // モーダル
 
-// モーダル要素の参照を取得
-var modal = document.getElementById('eventModal');
-var modalContent = document.querySelector('.modal_content');
-var modalImage = modalContent.querySelector('img');
-var modalTitle = document.getElementById('modalTitle');
-var modalDescription = document.getElementById('modalDescription');
+function setupModal(modalId, itemSelector, contentSelectors) {
+  var modal = document.getElementById(modalId);
+  var items = document.querySelectorAll(itemSelector);
+  var closeModalButton = modal.querySelector('.close');
 
-// クローズボタンの参照を取得
-var closeModal = document.querySelector('.close');
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      for (let key in contentSelectors) {
+        const selector = contentSelectors[key];
+        const contentElement = modal.querySelector(selector);
+        if (contentElement) {
+          if (contentElement.tagName.toLowerCase() === 'img') {
+            contentElement.src = item.querySelector(key).src;
+          } else {
+            contentElement.textContent = item.querySelector(key).textContent;
+          }
+        }
+      }
+      modal.style.display = "block";
+      if (window.innerWidth <= 768 && modal.querySelector('h2')) {
+        modal.querySelector('h2').classList.add('modal_active_text');
+      }
+    });
+  });
 
-// イベントアイテムの参照を取得
-var eventItems = document.querySelectorAll('.event_item');
-
-eventItems.forEach(function (item) {
-  item.addEventListener('click', function () {
-    // イベントアイテムから画像と文章を取得
-    var imageSrc = item.querySelector('.event_image img').src;
-    var title = item.querySelector('.event_name').textContent;
-    var description = item.querySelector('.event_description').textContent;
-
-    // モーダルウィンドウに画像と文章を設定
-    modalImage.src = imageSrc;
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-
-    // モーダルウィンドウを表示
-    modal.style.display = "block";
-
-    // モーダルコンテンツにmodal_activeクラスを追加
-    if (window.innerWidth <= 768) {
-      modalTitle.classList.add('modal_active_text');
+  closeModalButton.addEventListener('click', function () {
+    modal.style.display = "none";
+    if (modal.querySelector('h2')) {
+      modal.querySelector('h2').classList.remove('modal_active_text');
     }
   });
+
+  window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
+// コアコンピテンスモーダル
+setupModal('featureModal', '.feature_card', {
+  '.feature_name': '#featureModalTitle',
+  '.feature_description': '#featureModalDescription'
 });
 
-// クローズボタンをクリックしたときの処理
-closeModal.addEventListener('click', function () {
-  modal.style.display = "none";
-  modalTitle.classList.remove('modal_active_text');
+// イベントモーダル
+setupModal('eventModal', '.event_item', {
+  '.event_image img': '.event_modal img',
+  '.event_name': '#eventModalTitle',
+  '.event_description': '#eventModalDescription'
 });
 
-// モーダルの外側をクリックしたときも閉じる
-window.addEventListener('click', function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
-
-// タブ切り替え
+// イベント：タブ切り替え
 
 function openIndustry(evt, openIndustry) {
   let i, tabcontent, tablinks;

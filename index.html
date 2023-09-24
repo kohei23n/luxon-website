@@ -38,15 +38,27 @@
         <h2 class="section_title">Core Competence</h2>
         <div class="feature_body">
           <div class="feature_card">
-            <h2>暑苦しいコミットメント</h2>
+            <h2 class="feature_name">暑苦しいコミットメント</h2>
+            <p class="feature_description" style="display: none">コミットメントの説明文が入ります。</p>
           </div>
           <div class="feature_card">
-            <h2>高い再現性</h2>
+            <h2 class="feature_name">高い再現性</h2>
+            <p class="feature_description" style="display: none">再現性の説明文が入ります。</p>
           </div>
           <div class="feature_card">
-            <h2>リアルタイム情報</h2>
+            <h2 class="feature_name">リアルタイム情報</h2>
+            <p class="feature_description" style="display: none">リアルタイム情報の説明文が入ります。</p>
           </div>
         </div>
+
+        <div id="featureModal" class="modal">
+          <div class="modal_content feature_modal">
+            <span class="close">&times;</span>
+            <h2 class="feature_name" id="featureModalTitle"></h2>
+            <p class="feature_description" id="featureModalDescription"></p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -101,28 +113,28 @@
             <img src="./images/icons8-he-100.png" alt="" />
             <div class="service_text">
               <h2>専属・面談制度</h2>
-              <p>ここの文章は送っていただきたいです。</p>
+              <p>メンティー1人につき1人のメンターが専属で付きます。LINEでも常時相談に乗るパートナーです。また月に数回、100名近くの候補から希望するメンターと対策MTGが可能。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/discord.png" alt="" />
             <div class="service_text">
               <h2>Discord</h2>
-              <p>ここの文章は送っていただきたいです。</p>
+              <p>リアルタイムで選考情報を共有。欲しい情報を投げれば、メンター陣が即時収集します。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/meet.svg" alt="" />
             <div class="service_text">
               <h2>壁打ちMTG</h2>
-              <p>ここの文章は送っていただきたいです。</p>
+              <p>人物及びケース面接対策を就活生同士で行うことができるMTGを毎日6時間程度開催。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/forms.png" alt="" />
             <div class="service_text">
               <h2>ES・ケース添削</h2>
-              <p>ここの文章は送っていただきたいです。</p>
+              <p>利用プランに合わせてESをメンターが添削。通過できる状態に仕上げます。専属へのケーススクリプト共有による添削は制限なく可能。</p>
             </div>
           </div>
         </div>
@@ -223,7 +235,7 @@
                   <div class="event_itemBody">
                     <p class="event_name">学チカ作成講義</p>
                     <p class="event_description" style="display: none">
-                      楽チカ作成イベントの説明文が入ります。楽チカ作成イベントの説明文が入ります。
+                      学チカ作成イベントの説明文が入ります。楽チカ作成イベントの説明文が入ります。
                     </p>
                   </div>
                 </li>
@@ -266,11 +278,11 @@
         </div>
 
         <div id="eventModal" class="modal">
-          <div class="modal_content">
+          <div class="modal_content event_modal">
             <span class="close">&times;</span>
             <img src="" alt="イベント画像" width="200" height="175" />
-            <h2 class="event_name" id="modalTitle"></h2>
-            <p class="event_description" id="modalDescription">
+            <h2 class="event_name" id="eventModalTitle"></h2>
+            <p class="event_description" id="eventModalDescription">
               こちらにイベントの詳細を表示します。
             </p>
           </div>

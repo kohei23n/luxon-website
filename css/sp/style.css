@@ -55,7 +55,7 @@
     max-width: 300px;  
   }
 
-  .feature_card h2 {
+  .feature_name {
     font-size: 14px;
     font-weight: bold;
     margin: 0;
@@ -100,7 +100,12 @@
 
   .service_body {
     margin: 0 auto;
-    padding: 0 10%;
+    padding: 0 5%;
+  }
+
+  .service_detail {
+    width: 40%;
+    margin: 10px auto;
   }
 
   .service_detail img {
@@ -114,7 +119,7 @@
   }
   
   .service_text h2 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 
@@ -155,6 +160,10 @@
 
   .modal_active_text {
     font-size: 16px;
+  }
+
+  .close {
+    font-size: 20px;
   }
 
   /* ニュース */
