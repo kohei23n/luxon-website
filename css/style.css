@@ -316,6 +316,7 @@ body {
   color: rgba(10, 55, 92, 0.9);
   font-weight: bold;
   margin-bottom: 10px;
+  text-decoration: underline;
 }
 
 .service_overview, .service_description {
