@@ -84,7 +84,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  z-index: 2;
 }
 
 .header_list {
@@ -109,6 +108,7 @@ body {
   width: 42px;
   height: 42px;
   position: relative;
+  z-index: 2;
 }
 
 .header_buttonLine {
@@ -135,14 +135,15 @@ body {
 
 .header_menu {
   position: fixed;
-  inset: 0;
-  background-color: #F7F9FB;
-  visibility: hidden;
-  opacity: 0;
+  top: 0;
+  right: -100%; 
+  height: 100%;
+  width: 30%; 
+  background: linear-gradient(to top left, #DDDDDD, #FFFFFF);
   flex-direction: column;
   gap: 0;
   padding: 120px 24px 40px;
-  transition: visibility .3s linear, opacity .3s linear;
+  transition: right .3s linear;
 }
 
 .header_menuList {
@@ -150,6 +151,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.header_menuItem {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .header_menuLink {
@@ -161,8 +167,7 @@ body {
 }
 
 .header.is-open .header_menu {
-  visibility: visible;
-  opacity: 1;
+  right: 0; 
 }
 
 .header.is-open .header_buttonLine:nth-of-type(1) {
