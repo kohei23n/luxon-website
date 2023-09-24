@@ -203,6 +203,7 @@ body {
 .service_detail {
   width: 40%;
   margin: 30px auto;
+  cursor: pointer;
 }
 
 .service_detail img {
@@ -215,14 +216,14 @@ body {
   margin-top: 20px;
 }
 
-.service_text h2 {
+.service_name {
   font-size: 24px;
   color: rgba(10, 55, 92, 0.9);
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.service_text p {
+.service_overview, .service_description {
   font-size: 16px;
   line-height: 1.6;
 }
@@ -315,12 +316,19 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
+.feature_modal h2, .service_modal h2 {
+  margin-bottom: 20px;
+}
+
 .feature_modal {
   color: #000000;
 }
 
-.feature_modal h2 {
-  margin-bottom: 20px;
+.service_modal img {
+  object-fit: contain;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 200px;
 }
 
 .event_modal {
@@ -330,6 +338,8 @@ body {
 .event_modal img {
   object-fit: contain;
   margin-bottom: 10px;
+  width: 60%;
+  height: 175px;
 }
 
 .close {

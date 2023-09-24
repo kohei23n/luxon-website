@@ -98,6 +98,13 @@ setupModal('featureModal', '.feature_card', {
   '.feature_description': '#featureModalDescription'
 });
 
+// サービス内容モーダル
+setupModal('serviceModal', '.service_detail', {
+  '.service_image': '.service_modal img',
+  '.service_name': '#serviceModalTitle',
+  '.service_description': '#serviceModalDescription'
+});
+
 // イベントモーダル
 setupModal('eventModal', '.event_item', {
   '.event_image img': '.event_modal img',

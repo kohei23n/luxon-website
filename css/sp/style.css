@@ -153,6 +153,8 @@
     font-size: 13px;
   }
 
+  /* モーダル */
+
   .modal_content {
     padding: 20px;
     width: 70%;
@@ -164,6 +166,15 @@
 
   .close {
     font-size: 20px;
+  }
+
+  .service_modal img {
+    width: 90%;
+    height: 150px;
+  }
+
+  .event_modal img {
+    width: 80%;
   }
 
   /* ニュース */

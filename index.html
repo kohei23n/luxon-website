@@ -111,33 +111,53 @@
         <div class="service_body">
           <div class="service_detail">
             <img src="./images/icons8-he-100.png" alt="" />
+            <img src="./images/discord-ss.png" class="service_image" alt="" style="display: none;"/>
             <div class="service_text">
-              <h2>専属・面談制度</h2>
-              <p>メンティー1人につき1人のメンターが専属で付きます。LINEでも常時相談に乗るパートナーです。また月に数回、100名近くの候補から希望するメンターと対策MTGが可能。</p>
+              <h2 class="service_name">専属・面談制度</h2>
+              <p class="service_overview">短い説明が入ります。</p>
+              <p class="service_description" style="display: none">メンティー1人につき1人のメンターが専属で付きます。LINEでも常時相談に乗るパートナーです。また月に数回、100名近くの候補から希望するメンターと対策MTGが可能。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/discord.png" alt="" />
+            <img src="./images/discord-ss.png" class="service_image" alt="" style="display: none;"/>
             <div class="service_text">
-              <h2>Discord</h2>
-              <p>リアルタイムで選考情報を共有。欲しい情報を投げれば、メンター陣が即時収集します。</p>
+              <h2 class="service_name">Discord</h2>
+              <p class="service_overview">短い説明が入ります。</p>
+              <p class="service_description" style="display: none">リアルタイムで選考情報を共有。欲しい情報を投げれば、メンター陣が即時収集します。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/meet.svg" alt="" />
+            <img src="./images/discord-ss.png" class="service_image" alt="" style="display: none;"/>
             <div class="service_text">
-              <h2>壁打ちMTG</h2>
-              <p>人物及びケース面接対策を就活生同士で行うことができるMTGを毎日6時間程度開催。</p>
+              <h2 class="service_name">壁打ちMTG</h2>
+              <p class="service_overview">短い説明が入ります。</p>
+              <p class="service_description" style="display: none">人物及びケース面接対策を就活生同士で行うことができるMTGを毎日6時間程度開催。</p>
             </div>
           </div>
           <div class="service_detail">
             <img src="./images/forms.png" alt="" />
+            <img src="./images/es-ss.png" class="service_image" alt="" style="display: none;"/>
             <div class="service_text">
-              <h2>ES・ケース添削</h2>
-              <p>利用プランに合わせてESをメンターが添削。通過できる状態に仕上げます。専属へのケーススクリプト共有による添削は制限なく可能。</p>
+              <h2 class="service_name">ES・ケース添削</h2>
+              <p class="service_overview">短い説明が入ります。</p>
+              <p class="service_description" style="display: none">利用プランに合わせてESをメンターが添削。通過できる状態に仕上げます。専属へのケーススクリプト共有による添削は制限なく可能。</p>
             </div>
           </div>
         </div>
+
+        <div id="serviceModal" class="modal">
+          <div class="modal_content service_modal">
+            <span class="close">&times;</span>
+            <img src="" alt="サービス画像" />
+            <h2 class="service_name" id="serviceModalTitle"></h2>
+            <p class="service_description" id="serviceModalDescription">
+              こちらにサービスの詳細を表示します。
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -280,7 +300,7 @@
         <div id="eventModal" class="modal">
           <div class="modal_content event_modal">
             <span class="close">&times;</span>
-            <img src="" alt="イベント画像" width="200" height="175" />
+            <img src="" alt="イベント画像" />
             <h2 class="event_name" id="eventModalTitle"></h2>
             <p class="event_description" id="eventModalDescription">
               こちらにイベントの詳細を表示します。
@@ -301,10 +321,10 @@
 
         <!-- タブ -->
         <div class="tab">
-          <button class="tab_links" onclick="openIndustry(event, 'all')" id="defaultOpen">毎日本紹介</button>
-          <button class="tab_links" onclick="openIndustry(event, 'consult')" >コンサル</button>
-          <button class="tab_links" onclick="openIndustry(event, 'trade')">商社</button>
-          <button class="tab_links" onclick="openIndustry(event, 'other')">その他</button>
+          <button class="tab_links" onclick="openIndustry(event, 'all')" id="defaultOpen">すべて</button>
+          <button class="tab_links" onclick="openIndustry(event, 'events')" >イベント</button>
+          <button class="tab_links" onclick="openIndustry(event, 'book')">本紹介</button>
+          <button class="tab_links" onclick="openIndustry(event, 'youtube')">YouTube</button>
         </div>
 
         <div id="all" class="tab_content news_body">
@@ -326,7 +346,7 @@
           </ul>
         </div>
 
-        <div id="consult" class="tab_content news_body">
+        <div id="events" class="tab_content news_body">
           <ul class="news_list">
             <li class="news_item">
               <span class="news_date">2023-09-25</span>
@@ -346,7 +366,7 @@
           </ul>
         </div>
 
-        <div id="trade" class="tab_content news_body">
+        <div id="book" class="tab_content news_body">
           <ul class="news_list">
             <li class="news_item">
               <span class="news_date">2023-09-25</span>
@@ -364,7 +384,7 @@
           </ul>
         </div>
 
-        <div id="other" class="tab_content news_body">
+        <div id="youtube" class="tab_content news_body">
           <ul class="news_list">
             <li class="news_item">
               <span class="news_date">2023-09-25</span>
