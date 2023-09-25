@@ -185,7 +185,7 @@
     font-size: 20px;
   }
 
-  .service_modal img {
+  .feature_modal img, .service_modal img {
     width: 100%;
     height: 150px;
     margin: 10px 0;

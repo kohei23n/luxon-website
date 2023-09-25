@@ -412,7 +412,7 @@ body {
   color: #000000;
 }
 
-.service_modal img {
+.feature_modal img, .service_modal img {
   object-fit: contain;
   margin-bottom: 10px;
   width: 90%;

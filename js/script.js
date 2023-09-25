@@ -114,6 +114,7 @@ function setupModal(modalId, itemSelector, contentSelectors) {
 
 // コアコンピテンスモーダル
 setupModal('featureModal', '.feature_card', {
+  '.feature_image': '.feature_modal img',
   '.feature_name': '#featureModalTitle',
   '.feature_description': '#featureModalDescription'
 });
