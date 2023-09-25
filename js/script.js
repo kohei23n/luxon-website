@@ -87,7 +87,7 @@ function setupModal(modalId, itemSelector, contentSelectors) {
           if (contentElement.tagName.toLowerCase() === 'img') {
             contentElement.src = item.querySelector(key).src;
           } else {
-            contentElement.textContent = item.querySelector(key).textContent;
+            contentElement.innerHTML = item.querySelector(key).innerHTML;
           }
         }
       }

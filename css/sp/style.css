@@ -174,11 +174,11 @@
 
   .modal_content {
     padding: 20px;
-    width: 70%;
+    width: 80%;
   }
 
   .modal_active_text {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .close {
